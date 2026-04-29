@@ -70,7 +70,58 @@ button:hover {
     background: #1e3c72;
     color: white;
     padding: 20px;
+    display: flex; /* Para organizar mejor los elementos internos */
+    flex-direction: column; /* Para apilar verticalmente */
 }
+
+.sidebar h2 {
+    margin-bottom: 15px;
+}
+
+.sidebar input {
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    margin-bottom: 15px;
+    width: auto; /* Para que el botón "Crear" no ocupe todo el ancho si no es necesario */
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+/* Estilo para los botones de categoría */
+#listaCategorias button {
+    width: 100%; /* Que los botones de categoría ocupen todo el ancho */
+    text-align: left; /* Alinea el texto a la izquierda */
+    background: none;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+#listaCategorias button:hover {
+    background: #2c5299; /* Un color ligeramente diferente al pasar el ratón */
+}
+
+/* Total General en Sidebar */
+.total-general {
+    margin-top: auto; /* Empuja el total general al final del sidebar */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.total-general h3 {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.total-general p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 
 /* CONTENIDO */
 .contenido {
@@ -80,10 +131,19 @@ button:hover {
 }
 
 /* INPUTS PRODUCTOS MÁS ANCHOS */
-.producto-inputs input {
-    width: 30%;
-    margin-right: 10px;
+.producto-inputs {
+    display: flex;
+    flex-wrap: wrap; /* Para que los inputs se ajusten si la pantalla es pequeña */
+    gap: 10px; /* Espacio entre los inputs */
+    margin-bottom: 20px;
 }
+
+.producto-inputs input {
+    flex: 1 1 22%; /* Permite que los inputs crezcan/encojan y tengan un tamaño base del 22% del contenedor */
+    min-width: 150px; /* Ancho mínimo para que no se vean demasiado pequeños */
+    margin-bottom: 0; /* Elimina el margen inferior que tenían los inputs globales */
+}
+
 
 /* TABLA */
 table {
@@ -96,4 +156,15 @@ th, td {
     padding: 12px;
     border: 1px solid #ccc;
     text-align: center;
+}
+
+/* Estilo para el pie de tabla (totales) */
+tfoot td {
+    font-weight: bold;
+    background-color: #e9e9e9;
+}
+
+.total-label {
+    text-align: right;
+    padding-right: 15px; /* Pequeño margen a la derecha */
 }
