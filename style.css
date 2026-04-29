@@ -1,0 +1,99 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* FONDO SOLO LOGIN */
+body.login {
+    background-image: url("tienda.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOGIN TRANSPARENTE */
+.login-box {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(12px);
+    width: 420px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* BOTONES */
+button {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 10px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #219150;
+}
+
+/* PANEL */
+.panel {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: #1e3c72;
+    color: white;
+    padding: 20px;
+}
+
+/* CONTENIDO */
+.contenido {
+    flex: 1;
+    padding: 40px;
+    background: #f5f5f5;
+}
+
+/* INPUTS PRODUCTOS MÁS ANCHOS */
+.producto-inputs input {
+    width: 30%;
+    margin-right: 10px;
+}
+
+/* TABLA */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
